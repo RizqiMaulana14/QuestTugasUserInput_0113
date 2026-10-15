@@ -2,4 +2,5 @@
 <resources>
     <dimen name="padding_kecil">10dp</dimen>
     <dimen name="padding_sedang">16dp</dimen>
+    <dimen name="padding_besar">24dp</dimen>
 </resources>
