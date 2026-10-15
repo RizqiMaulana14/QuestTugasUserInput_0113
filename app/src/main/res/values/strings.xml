@@ -2,4 +2,5 @@
     <string name="app_name">Pertemuan 5 Tugas</string>
     <string name="form">Form Biodata</string>
     <string name="kata_bawah">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="proceed">Proceed</string>
 </resources>
