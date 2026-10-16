@@ -31,4 +31,12 @@
     <dimen name="elevasi_card">16dp</dimen>
     <dimen name="elevasi_card_form">0dp</dimen>
 
+    <dimen name="font_judul">28sp</dimen>
+    <dimen name="font_petunjuk">14sp</dimen>
+    <dimen name="font_skill_label">16sp</dimen>
+    <dimen name="font_skill">13sp</dimen>
+    <dimen name="font_ikon">22sp</dimen>
+    <dimen name="font_hasil_judul">16sp</dimen>
+
+    <dimen name="divider_tipis">1dp</dimen>
 </resources>
