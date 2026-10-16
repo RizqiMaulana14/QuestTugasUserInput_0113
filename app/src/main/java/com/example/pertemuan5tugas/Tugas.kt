@@ -309,3 +309,54 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     Spacer(
                         modifier = Modifier.height(dimensionResource(R.dimen.jarak_skill))
                     )
+
+                    Text(
+                        text = stringResource(R.string.pilih_skill
+                        ),
+                        modifier = Modifier.fillMaxWidth(),
+                        color = colorResource(id = R.color.hitam),
+                        fontSize = dimensionResource(id = R.dimen.font_skill_label).value.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_judul))
+                    )
+
+                    Row(modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        daftarSkill.forEach { skill ->
+                            Row(verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Checkbox(
+                                    checked = skill in skillTerpilih,
+                                    onCheckedChange = { checked ->
+                                        if (checked) {
+                                            skillTerpilih.add(skill)
+                                        } else {
+                                            skillTerpilih.remove(skill)
+                                        }
+
+                                        tampilkanHasil = false
+                                    },
+                                    colors = CheckboxDefaults.colors(
+                                        checkedColor = colorResource(id = R.color.ungu_judul),
+                                        uncheckedColor = colorResource(id = R.color.abu_teks),
+                                        checkmarkColor = colorResource(id = R.color.putih)
+                                    )
+                                )
+
+                                Text(
+                                    text = skill,
+                                    color = colorResource(id = R.color.hitam),
+                                    fontSize = dimensionResource(id = R.dimen.font_skill).value.sp,
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_tombol))
+                    )
