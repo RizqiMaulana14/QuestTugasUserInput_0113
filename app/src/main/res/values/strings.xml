@@ -13,4 +13,5 @@
     <string name="exp_2_3">2 - 3 tahun</string>
     <string name="exp_lebih_3">Di atas 3 tahun</string>
     <string name="skill_andro">Android</string>
+    <string name="skill_ui">UI/UX</string>
 </resources>
