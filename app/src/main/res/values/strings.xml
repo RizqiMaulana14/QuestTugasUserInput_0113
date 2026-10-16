@@ -19,4 +19,11 @@
     <string name="kalender_pilih">Pilih</string>
     <string name="kalender_batal">Batal</string>
     <string name="kalender_ikon">▦</string>
+
+    <string name="hasil_judul">Biodata</string>
+    <string name="hasil_nama">Nama : %1$s %2$s</string>
+    <string name="hasil_email">Email : %1$s</string>
+    <string name="hasil_tanggal">Tanggal Lahir : %1$s</string>
+    <string name="hasil_experience">Experience : %1$s</string>
+    <string name="hasil_skill">Skill : %1$s</string>
 </resources>
