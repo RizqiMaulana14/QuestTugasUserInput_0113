@@ -76,3 +76,6 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         }
     }
 
+    Box(modifier = modifier.fillMaxSize()
+            .background(colorResource(R.color.putih_latar))
+    ) {
