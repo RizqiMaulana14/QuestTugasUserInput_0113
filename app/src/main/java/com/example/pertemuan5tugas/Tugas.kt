@@ -207,3 +207,105 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                             )
                         )
                     )
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_field))
+                    )
+
+                    Row(modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(
+                            dimensionResource(R.dimen.jarak_field_nama)
+                        ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+
+                        OutlinedTextField(
+                            value = tanggalLahir,
+                            onValueChange = {},
+                            readOnly = true,
+                            modifier = Modifier.weight(1f),
+                            label = {
+                                Text(
+                                    stringResource(R.string.tgl_lahir
+                                    )
+                                )
+                            },
+                            trailingIcon = {
+                                TextButton(
+                                    onClick = {
+                                        tampilkanKalender = true
+                                    }
+                                ) {
+                                    Text(
+                                        text = stringResource(R.string.kalender_ikon
+                                        ),
+                                        color = colorResource(id = R.color.hitam),
+                                        fontSize = dimensionResource(id = R.dimen.font_ikon).value.sp,
+                                    )
+                                }
+                            },
+                            singleLine = true,
+                            shape = RoundedCornerShape(
+                                dimensionResource(R.dimen.radius_input
+                                )
+                            )
+                        )
+
+                        ExposedDropdownMenuBox(
+                            expanded = dropdownTerbuka,
+                            onExpandedChange = {
+                                dropdownTerbuka = it
+                            },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = {},
+                                readOnly = true,
+                                modifier = Modifier.menuAnchor(
+                                        MenuAnchorType.PrimaryNotEditable
+                                    )
+                                    .fillMaxWidth(),
+                                label = {
+                                    Text(
+                                        stringResource(R.string.experience
+                                        )
+                                    )
+                                },
+                                trailingIcon = {
+                                    ExposedDropdownMenuDefaults.TrailingIcon(
+                                            expanded = dropdownTerbuka
+                                        )
+                                },
+                                singleLine = true,
+                                shape = RoundedCornerShape(
+                                    dimensionResource(R.dimen.radius_input
+                                    )
+                                )
+                            )
+
+                            ExposedDropdownMenu(
+                                expanded = dropdownTerbuka,
+                                onDismissRequest = {
+                                    dropdownTerbuka = false
+                                }
+                            ) {
+                                pilihanExperience.forEach { pilihan ->
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(pilihan)
+                                        },
+                                        onClick = {
+                                            experience = pilihan
+                                            dropdownTerbuka = false
+                                            tampilkanHasil = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_skill))
+                    )
