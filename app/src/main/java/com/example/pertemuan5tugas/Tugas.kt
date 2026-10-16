@@ -79,3 +79,13 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     Box(modifier = modifier.fillMaxSize()
             .background(colorResource(R.color.putih_latar))
     ) {
+        Column(modifier = Modifier.fillMaxSize()
+                .verticalScroll(rememberScrollState())
+        ) {
+
+            Image(painter = painterResource(id = R.drawable.background),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxWidth()
+                    .height(dimensionResource(R.dimen.tinggi_header))
+            )
