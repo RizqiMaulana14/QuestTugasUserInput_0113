@@ -18,4 +18,5 @@
     <string name="pilih_tanggal">Pilih tanggal lahir</string>
     <string name="kalender_pilih">Pilih</string>
     <string name="kalender_batal">Batal</string>
+    <string name="kalender_ikon">▦</string>
 </resources>
