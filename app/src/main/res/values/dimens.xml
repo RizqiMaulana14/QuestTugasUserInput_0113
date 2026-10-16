@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="padding_kecil">10dp</dimen>
+    <dimen name="padding_kecil">8dp</dimen>
     <dimen name="padding_sedang">16dp</dimen>
     <dimen name="padding_besar">24dp</dimen>
-    <dimen name="divider_tipis">1dp</dimen>
+    <dimen name="padding_card">20dp</dimen>
+    <dimen name="padding_horizontal">24dp</dimen>
+    <dimen name="padding_bawah">24dp</dimen>
+
+    <dimen name="jarak_field">20dp</dimen>
+    <dimen name="jarak_field_nama">10dp</dimen>
+    <dimen name="jarak_judul">12dp</dimen>
+    <dimen name="jarak_petunjuk">32dp</dimen>
+    <dimen name="jarak_skill">30dp</dimen>
+    <dimen name="jarak_checkbox">12dp</dimen>
+    <dimen name="jarak_tombol">24dp</dimen>
+    <dimen name="jarak_divider">16dp</dimen>
+    <dimen name="jarak_card_hasil">8dp</dimen>
 </resources>
