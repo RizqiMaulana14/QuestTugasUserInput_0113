@@ -15,4 +15,5 @@
     <string name="skill_andro">Android</string>
     <string name="skill_ui">UI/UX</string>
     <string name="skill_web">Web</string>
+    <string name="pilih_tanggal">Pilih tanggal lahir</string>
 </resources>
