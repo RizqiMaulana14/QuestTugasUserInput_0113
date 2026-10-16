@@ -38,3 +38,34 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     var dropdownTerbuka by remember { mutableStateOf(false) }
     var tampilkanKalender by remember { mutableStateOf(false) }
     var tampilkanHasil by remember { mutableStateOf(false) }
+
+    val skillAndroid = stringResource(R.string.skill_andro)
+    val skillUI = stringResource(R.string.skill_ui)
+    val skillWeb = stringResource(R.string.skill_web)
+
+    val daftarSkill = listOf(
+        skillAndroid,
+        skillUI,
+        skillWeb
+    )
+
+    val skillTerpilih = remember {
+        mutableStateListOf<String>()
+    }
+
+    val pilihanExperience = listOf(
+        stringResource(R.string.exp_1),
+        stringResource(R.string.exp_2_3),
+        stringResource(R.string.exp_lebih_3)
+    )
+
+    val datePickerState = rememberDatePickerState()
+
+    val formValid =
+        namaDepan.isNotBlank() &&
+                namaBelakang.isNotBlank() &&
+                email.isNotBlank()&&
+                tanggalLahir.isNotBlank() &&
+                experience.isNotBlank() &&
+                skillTerpilih.isNotEmpty()
+    
