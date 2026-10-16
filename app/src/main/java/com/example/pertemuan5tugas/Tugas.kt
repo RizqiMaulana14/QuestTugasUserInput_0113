@@ -118,3 +118,25 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         ),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+
+                    Text(
+                        text = stringResource(R.string.form),
+                        color = colorResource(id = R.color.ungu_judul),
+                        fontSize = dimensionResource(R.dimen.font_judul).value.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_judul))
+                    )
+
+                    Text(
+                        text = stringResource(R.string.kata_bawah
+                        ),
+                        color = colorResource(id = R.color.abu_teks),
+                        fontSize = dimensionResource(id = R.dimen.font_petunjuk).value.sp,
+                    )
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_petunjuk))
+                    )
