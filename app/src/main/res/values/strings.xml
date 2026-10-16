@@ -16,4 +16,5 @@
     <string name="skill_ui">UI/UX</string>
     <string name="skill_web">Web</string>
     <string name="pilih_tanggal">Pilih tanggal lahir</string>
+    <string name="kalender_pilih">Pilih</string>
 </resources>
