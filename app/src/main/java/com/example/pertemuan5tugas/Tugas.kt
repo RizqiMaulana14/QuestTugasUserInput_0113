@@ -68,4 +68,11 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 tanggalLahir.isNotBlank() &&
                 experience.isNotBlank() &&
                 skillTerpilih.isNotEmpty()
-    
+
+    LaunchedEffect(tampilkanHasil) {
+        if (tampilkanHasil) {
+            delay(5000)
+            tampilkanHasil = false
+        }
+    }
+
