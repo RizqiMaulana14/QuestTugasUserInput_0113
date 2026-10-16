@@ -409,8 +409,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
 
         if (tampilkanHasil) {
             ElevatedCard(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
+                modifier = Modifier.align(Alignment.BottomCenter)
                     .fillMaxWidth()
                     .padding(horizontal = dimensionResource(R.dimen.jarak_tombol)),
                 shape = RoundedCornerShape(
@@ -424,8 +423,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 )
             ) {
                 Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth()
                         .padding(
                             dimensionResource(
                                 R.dimen.padding_sedang
@@ -462,3 +460,55 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         }
     }
+
+    if (tampilkanKalender) {
+        DatePickerDialog(
+            onDismissRequest = {
+                tampilkanKalender = false
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        datePickerState.selectedDateMillis?.let {
+                                millis ->
+                            val formatter = SimpleDateFormat(
+                                "dd/MM/yyyy",
+                                Locale.getDefault()
+                            )
+
+                            formatter.timeZone =
+                                TimeZone.getTimeZone("UTC")
+
+                            tanggalLahir = formatter.format(
+                                Date(millis)
+                            )
+
+                            tampilkanHasil = false
+                        }
+
+                        tampilkanKalender = false
+                    }
+                ) {
+                    Text(
+                        stringResource(R.string.kalender_pilih)
+                    )
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = {
+                        tampilkanKalender = false
+                    }
+                ) {
+                    Text(
+                        stringResource(R.string.kalender_batal)
+                    )
+                }
+            }
+        ) {
+            DatePicker(
+                state = datePickerState
+            )
+        }
+    }
+}
