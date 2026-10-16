@@ -26,4 +26,9 @@
     <dimen name="ukuran_ikon_kalender">22sp</dimen>
     <dimen name="lebar_card_margin">24dp</dimen>
 
+    <dimen name="radius_card">32dp</dimen>
+    <dimen name="radius_input">18dp</dimen>
+    <dimen name="elevasi_card">16dp</dimen>
+    <dimen name="elevasi_card_form">0dp</dimen>
+
 </resources>
