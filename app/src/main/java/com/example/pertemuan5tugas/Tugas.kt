@@ -140,3 +140,49 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     Spacer(
                         modifier = Modifier.height(dimensionResource(R.dimen.jarak_petunjuk))
                     )
+
+                    Row(modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.jarak_field_nama)                        )
+                    ) {
+                        OutlinedTextField(
+                            value = namaDepan,
+                            onValueChange = {
+                                namaDepan = it
+                                tampilkanHasil = false
+                            },
+                            modifier = Modifier.weight(1f),
+                            label = {
+                                Text(stringResource(R.string.nama_depan
+                                    )
+                                )
+                            },
+                            singleLine = true,
+                            shape = RoundedCornerShape(
+                                dimensionResource(R.dimen.radius_input
+                                )
+                            )
+                        )
+
+                        OutlinedTextField(
+                            value = namaBelakang,
+                            onValueChange = {
+                                namaBelakang = it
+                                tampilkanHasil = false
+                            },
+                            modifier = Modifier.weight(1f),
+                            label = {
+                                Text(stringResource(                                     R.string.nama_belakang
+                                    )
+                                )
+                            },
+                            singleLine = true,
+                            shape = RoundedCornerShape(
+                                dimensionResource(R.dimen.radius_input
+                                )
+                            )
+                        )
+                    }
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_field))
+                    )
