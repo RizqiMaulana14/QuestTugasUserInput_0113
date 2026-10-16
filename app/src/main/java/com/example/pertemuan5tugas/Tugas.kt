@@ -406,3 +406,59 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 }
             }
         }
+
+        if (tampilkanHasil) {
+            ElevatedCard(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .padding(horizontal = dimensionResource(R.dimen.jarak_tombol)),
+                shape = RoundedCornerShape(
+                    dimensionResource(R.dimen.radius_input)
+                ),
+                colors = CardDefaults.elevatedCardColors(
+                    containerColor = colorResource(id = R.color.hitam)
+                ),
+                elevation = CardDefaults.elevatedCardElevation(
+                    defaultElevation = dimensionResource(R.dimen.elevasi_card)
+                )
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            dimensionResource(
+                                R.dimen.padding_sedang
+                            )
+                        ),
+                    verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_kecil))
+                ) {
+
+                    Text(text = stringResource(R.string.hasil_judul),
+                        color = colorResource(id = R.color.putih),
+                        fontWeight = FontWeight.Bold
+                    )
+
+                    Text(text = stringResource(R.string.hasil_nama,namaDepan, namaBelakang),
+                        color = colorResource(id = R.color.putih)
+                    )
+
+                    Text(text = stringResource(R.string.hasil_email, email),
+                        color = colorResource(id = R.color.putih)
+                    )
+
+                    Text(text = stringResource(R.string.hasil_tanggal,tanggalLahir),
+                        color = colorResource(id = R.color.putih)
+                    )
+
+                    Text(text = stringResource(R.string.hasil_experience,experience),
+                        color = colorResource(id = R.color.putih)
+                    )
+
+                    Text(text = stringResource(R.string.hasil_skill,skillTerpilih.joinToString(", ")),
+                        color = colorResource(id = R.color.putih)
+                    )
+                }
+            }
+        }
+    }
