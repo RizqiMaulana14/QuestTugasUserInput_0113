@@ -89,3 +89,32 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxWidth()
                     .height(dimensionResource(R.dimen.tinggi_header))
             )
+
+            ElevatedCard(
+                modifier = Modifier.fillMaxWidth()
+                    .offset(y = -dimensionResource(R.dimen.tumpukan_card)
+                    ),
+                shape = RoundedCornerShape(topStart =
+                    dimensionResource(R.dimen.radius_card
+                    ),
+                    topEnd = dimensionResource(R.dimen.radius_card
+                    )
+                ),
+                colors = CardDefaults.elevatedCardColors(
+                    containerColor = colorResource(id = R.color.putih)
+                ),
+                elevation = CardDefaults.elevatedCardElevation(
+                    defaultElevation =  dimensionResource(R.dimen.elevasi_card_form)
+                )
+            ) {
+                Column(
+                    modifier = Modifier.fillMaxWidth()
+                        .padding(horizontal = dimensionResource(
+                                R.dimen.padding_card
+                            ),
+                            vertical = dimensionResource(
+                                R.dimen.padding_sedang
+                            )
+                        ),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
