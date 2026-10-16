@@ -360,3 +360,49 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     Spacer(
                         modifier = Modifier.height(dimensionResource(R.dimen.jarak_tombol))
                     )
+
+                    Button(
+                        onClick = {
+                            tampilkanHasil = true
+                        },
+                        enabled = formValid,
+                        modifier = Modifier.fillMaxWidth()
+                            .height(
+                                dimensionResource(R.dimen.tinggi_tombol
+                                )
+                            ),
+                        shape = RoundedCornerShape(
+                            dimensionResource(R.dimen.radius_input
+                            )
+                        ),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.ungu_tombol),
+                            contentColor = colorResource(id = R.color.putih),
+                            disabledContainerColor = colorResource(id = R.color.abu_tombol),
+                            disabledContentColor = colorResource(id = R.color.putih)
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(R.string.proceed
+                            ),
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_tombol))
+                    )
+
+                    HorizontalDivider(
+                        thickness = dimensionResource(
+                            R.dimen.divider_tipis
+                        ),
+                        color = colorResource(id = R.color.abu_border)
+                    )
+
+                    Spacer(
+                        modifier = Modifier.height(dimensionResource(R.dimen.jarak_divider))
+                    )
+                }
+            }
+        }
