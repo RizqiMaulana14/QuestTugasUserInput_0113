@@ -16,4 +16,9 @@
     <dimen name="jarak_tombol">24dp</dimen>
     <dimen name="jarak_divider">16dp</dimen>
     <dimen name="jarak_card_hasil">8dp</dimen>
+
+    <dimen name="tinggi_header">300dp</dimen>
+    <dimen name="tumpukan_card">60dp</dimen>
+    <dimen name="tinggi_input">56dp</dimen>
+    <dimen name="tinggi_tombol">52dp</dimen>
 </resources>
