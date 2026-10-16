@@ -186,3 +186,24 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     Spacer(
                         modifier = Modifier.height(dimensionResource(R.dimen.jarak_field))
                     )
+
+                    OutlinedTextField(
+                        value = email,
+                        onValueChange = {
+                            email = it
+                            tampilkanHasil = false
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        label = {
+                            Text(stringResource(R.string.email)
+                            )
+                        },
+                        singleLine = true,
+                        keyboardOptions = KeyboardOptions(
+                            keyboardType = KeyboardType.Email
+                        ),
+                        shape = RoundedCornerShape(
+                            dimensionResource(R.dimen.radius_input
+                            )
+                        )
+                    )
