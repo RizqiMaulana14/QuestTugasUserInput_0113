@@ -17,4 +17,5 @@
     <string name="skill_web">Web</string>
     <string name="pilih_tanggal">Pilih tanggal lahir</string>
     <string name="kalender_pilih">Pilih</string>
+    <string name="kalender_batal">Batal</string>
 </resources>
